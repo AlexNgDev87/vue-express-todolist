@@ -1,31 +1,33 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <create-todo></create-todo>
+      <list-todo></list-todo>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import CreateTodo from './todo/CreateTodo.vue'
+import ListTodo from './todo/ListTodo.vue'
+
+export default {
+  name: 'app',
+  data() {
+    return {}
+  },
+  components: { CreateTodo, ListTodo },
+}
+</script>
+
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity .5s
+  }
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
+  }
 </style>

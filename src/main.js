@@ -7,4 +7,9 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   render: h => h(App),
-}).$mount('#app');
+  methods: {},
+  created: function() {
+    console.log('root instance was created')
+  },
+})
+.$mount('#app');

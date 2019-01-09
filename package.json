@@ -1,14 +1,27 @@
 {
   "name": "todo-vue",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A simple todo application",
+  "main": "server.js",
+  "author": "Alex Ng",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start-api": "node server.js",
+    "combine-serve": "node server.js ; vue-cli-service serve"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.2",
+    "morgan": "^1.9.1",
     "vue": "^2.5.21",
+    "vue-axios": "^2.1.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
